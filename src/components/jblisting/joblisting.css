@@ -1,0 +1,116 @@
+.job__list-div {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly; 
+  }
+  
+  .card__div {
+    width: calc(30% - 40px); 
+    margin: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  
+  .logo__card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+  }
+  
+  .card__logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .card_details h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .card_details h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .card_details h6 {
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+  }
+  
+
+  .salary_div {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .experience__div {
+    margin-top: 2px;
+    color: #555;
+    text-align: center;
+  }
+  
+  /* job__details styling */
+  .jobdetails__heading{
+    font-size: larger;
+    margin: 20px 0 0 20px;
+
+  }
+  .job__details {
+    position: relative;
+    width: 100%;
+    margin-top: -2px;
+  }
+  
+  .job__details p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444;
+    padding: 10px;
+    margin: 0;
+    position: relative;
+  }
+  /* button styling */
+  .button__container {
+    width: 100%; 
+  }
+  
+  .button__container button {
+    width: 100%;
+    flex-grow: 1; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .apply__Button {
+    margin-top: 5px;
+    background-color: #28a745 !important;
+    color: #fff;
+  }
+  .viewmore__button{
+    margin-top: -10px;
+  }
+  
+  
+  .button__container button:hover {
+    background-color: #007bff !important;
+    color: #fff;
+  }
+  
+  

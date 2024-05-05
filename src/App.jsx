@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import React from 'react';
+ import{ useState } from 'react';
 import './App.css'
 import Filters from './components/filters/Filters'
 import Header from './components/header/Header'
 import JobListing from './components/jblisting/JobListing'
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   const [jobRole, setjobRole] = useState([]);
@@ -28,8 +29,15 @@ setsearchResult(res);
     <>
    <Header/>
    <Filters jobRole={jobRole} location={location} minJdSalary={minJdSalary} handleSearch={handleSearch} />
-   <JobListing handlejobRole={handlejobRole} handlelocation={handlelocation}
-    handleminJdSalary={handleminJdSalary} searchResult={searchResult}/>
+   <BrowserRouter>
+    <Routes>
+      <Route  path='/'
+      element={<JobListing handlejobRole={handlejobRole} handlelocation={handlelocation}
+    handleminJdSalary={handleminJdSalary} searchResult={searchResult}/>}
+
+      />
+    </Routes>
+   </BrowserRouter>
     </>
   )
 }

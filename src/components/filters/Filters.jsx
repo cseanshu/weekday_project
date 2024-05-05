@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import './filter.css'
 function Filters({jobRole,location,minJdSalary,handleSearch}) {
     const [jobSearch, setjobSearch] = useState({
      role:'',
@@ -20,7 +20,7 @@ function Filters({jobRole,location,minJdSalary,handleSearch}) {
       handleSearch(jobSearch);
     },[jobSearch])
   return (
-    <div>
+    <div className='filter__div'>
         <select value={jobSearch.role} name='role' onChange={handleChange}>
         <option>Roles</option>
             {
