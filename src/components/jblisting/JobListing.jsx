@@ -9,23 +9,23 @@ function JobListing({
   handleminJdSalary,
   searchResult,
 }) {
-  const [jobsData, setJobsData] = useState([]);
-  const [error, setError] = useState(null);
-  const [jobRole, setjobRole] = useState([]);
-  const [location, setlocation] = useState([]);
-  const [minJdSalary, setminJdSalary] = useState([]);
+  const [jobsData, setJobsData] = useState([]);    //state for the jobData
+  const [error, setError] = useState(null);         // state for the error if during data loading 
+  const [jobRole, setjobRole] = useState([]);  //state for setting the  jobRole for searching the job based on Role
+  const [location, setlocation] = useState([]);//loation for setting the  jobRole for searching the job based on Role
+  const [minJdSalary, setminJdSalary] = useState([]);//salary for setting the  jobRole for searching the job based on Role
   const [pagelimit,setpagelimit]=useState(10);        // pagelimit for  the iinfinite scroll
-  const[loading,setLoading]=useState(true);
+  const[loading,setLoading]=useState(true);     //state for the Loading spinner
   handlejobRole(jobRole);
   handlelocation(location);
   handleminJdSalary(minJdSalary);
-  useEffect(() => {
-    const fetchData = async () => {
+  useEffect(() => {         //defining the fetchdata function 
+    const fetchData = async () => {  
       const myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
 
       const body = JSON.stringify({
-        limit: pagelimit,
+        limit: pagelimit,      //setting the  limit dynamically on the scrroll i.e logic for the infinite scroll
         offset: 0,
       });
 
@@ -40,12 +40,12 @@ function JobListing({
           "https://api.weekday.technology/adhoc/getSampleJdJSON",
           requestOptions
         );
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
+        if (!response.ok) {      // if there is any error 
+          throw new Error("Network response was not ok");   
         }
         const data = await response.json();
         console.log("coming data", data.jdList);
-        setJobsData(data.jdList);
+        setJobsData(data.jdList);     //setting the data  
         setLoading(false)  //when it get data then it become false again 
 
         const extractedJobRoles = data.jdList
@@ -221,7 +221,7 @@ function JobListing({
           }
         </div>
       )}
-      {loading&&<Loader/>}
+      {loading&&<Loader/>}     {/*  spinner Loader during the page Loading */    }    
     </div>
     
   );

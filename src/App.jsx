@@ -37,9 +37,11 @@ setsearchResult(res);
 
       />
     </Routes>
-   </BrowserRouter>
+   </BrowserRouter>     
     </>
   )
 }
 
 export default App
+
+//  I have used React-router for the  button easy apply so it does not load the page to retain the functionality of react 

@@ -9,3 +9,5 @@ export default function Loader() {
     </Box>
   );
 }
+
+// this a Loader which show during the data is loading

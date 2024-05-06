@@ -2,6 +2,7 @@ select,input{
     padding: 10px; 
     padding-right: 30px;
     margin-left: 10px;
+    margin: 5px;
     border: 1px soid grey;
     border-radius: 5px;
     box-shadow: 2px 2px rgb(29, 28, 28);
@@ -12,5 +13,9 @@ input:focus{
     font-weight: 600;
 }
 .filter__div{
- margin: 10px 0 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0 10px 10px;
 }

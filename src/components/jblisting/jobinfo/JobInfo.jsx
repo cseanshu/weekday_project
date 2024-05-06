@@ -77,3 +77,6 @@ export default function JobInfo({ job }) {
     </React.Fragment>
   );
 }
+
+
+// this is a page which give us all details about the job which you are applying
