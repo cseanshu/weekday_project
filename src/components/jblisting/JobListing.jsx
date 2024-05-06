@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./joblisting.css";
 import { NavLink } from "react-router-dom";
+import JobInfo from "./jobinfo/JobInfo";
 function JobListing({
   handlejobRole,
   handlelocation,
@@ -174,8 +175,10 @@ function JobListing({
 
                   <div className="button__container">
                     <div>
-                      {" "}
-                      <button className="viewmore__button">View-more➡️</button>
+                      {/* <button className="viewmore__button">View-more➡️</button> */}
+                      <div>
+                    <JobInfo job={job} />   {/*Rendering the JobIfo component in place of the button so that it gives whole details*/}
+                  </div>
                     </div>
                     <div>
                       <NavLink to={job.jdLink} target="blank">

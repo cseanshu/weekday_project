@@ -1,7 +1,4 @@
 import {
-  require_react_dom
-} from "./chunk-YIEACHPR.js";
-import {
   AbortedDeferredError,
   Action,
   Await,
@@ -64,6 +61,9 @@ import {
   useRoutesImpl,
   warning
 } from "./chunk-I253SW6Q.js";
+import {
+  require_react_dom
+} from "./chunk-YIEACHPR.js";
 import {
   __toESM,
   require_react
