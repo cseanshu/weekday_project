@@ -1,20 +1,21 @@
 import {
-  getOverlayAlpha_default,
-  useTheme
-} from "./chunk-SV7V3VIE.js";
-import {
   DialogContext_default
 } from "./chunk-DW7YGZ4H.js";
 import {
-  Transition_default
-} from "./chunk-VUVAGN2Y.js";
+  getOverlayAlpha_default,
+  useTheme
+} from "./chunk-UKVRTCX7.js";
 import {
-  require_react_dom
-} from "./chunk-YIEACHPR.js";
+  Transition_default
+} from "./chunk-2AAYSF5I.js";
 import {
   init_useForkRef,
   useForkRef_default
-} from "./chunk-JN32W4HY.js";
+} from "./chunk-2WLTQ2F6.js";
+import {
+  capitalize_default,
+  init_capitalize
+} from "./chunk-KYID3LSH.js";
 import {
   HTMLElementType,
   chainPropTypes,
@@ -36,11 +37,7 @@ import {
   useEventCallback_default,
   useForkRef,
   useId
-} from "./chunk-LMOE23RB.js";
-import {
-  capitalize_default,
-  init_capitalize
-} from "./chunk-P3F3PAXD.js";
+} from "./chunk-ZTBWZVCX.js";
 import {
   _extends,
   _objectWithoutPropertiesLoose,
@@ -61,7 +58,10 @@ import {
   require_prop_types,
   styled_default,
   useThemeProps2 as useThemeProps
-} from "./chunk-UXVEVHLQ.js";
+} from "./chunk-FLXWOJIN.js";
+import {
+  require_react_dom
+} from "./chunk-YIEACHPR.js";
 import {
   __toESM,
   require_react
@@ -2282,6 +2282,11 @@ true ? Dialog.propTypes = {
 var Dialog_default = Dialog;
 
 export {
+  reflow,
+  getTransitionProps,
+  getPaperUtilityClass,
+  paperClasses_default,
+  Paper_default,
   isHostComponent,
   appendOwnerState,
   areArraysEqual,
@@ -2291,12 +2296,10 @@ export {
   useRootElementName,
   mergeSlotProps,
   useSlotProps,
-  ModalManager,
-  useModal,
   FocusTrap,
   Portal,
-  reflow,
-  getTransitionProps,
+  ModalManager,
+  useModal,
   Fade_default,
   getBackdropUtilityClass,
   backdropClasses_default,
@@ -2304,11 +2307,8 @@ export {
   getModalUtilityClass,
   modalClasses_default,
   Modal_default,
-  getPaperUtilityClass,
-  paperClasses_default,
-  Paper_default,
   getDialogUtilityClass,
   dialogClasses_default,
   Dialog_default
 };
-//# sourceMappingURL=chunk-LGAQNBAH.js.map
+//# sourceMappingURL=chunk-ZAW3I3VK.js.map

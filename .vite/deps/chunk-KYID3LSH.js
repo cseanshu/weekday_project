@@ -1,7 +1,7 @@
 import {
   capitalize,
   init_capitalize
-} from "./chunk-UXVEVHLQ.js";
+} from "./chunk-FLXWOJIN.js";
 import {
   __esm
 } from "./chunk-6EPYQA3G.js";
@@ -19,4 +19,4 @@ export {
   capitalize_default,
   init_capitalize2 as init_capitalize
 };
-//# sourceMappingURL=chunk-P3F3PAXD.js.map
+//# sourceMappingURL=chunk-KYID3LSH.js.map

@@ -4,7 +4,7 @@ import {
   init_defaultTheme,
   init_identifier,
   useTheme_default
-} from "./chunk-UXVEVHLQ.js";
+} from "./chunk-FLXWOJIN.js";
 import {
   __toESM,
   require_react
@@ -38,4 +38,4 @@ export {
   useTheme,
   getOverlayAlpha_default
 };
-//# sourceMappingURL=chunk-SV7V3VIE.js.map
+//# sourceMappingURL=chunk-UKVRTCX7.js.map

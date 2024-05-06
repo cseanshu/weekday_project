@@ -1,7 +1,7 @@
 import {
   capitalize_default,
   init_capitalize
-} from "./chunk-P3F3PAXD.js";
+} from "./chunk-KYID3LSH.js";
 import {
   _extends,
   _objectWithoutPropertiesLoose,
@@ -23,7 +23,7 @@ import {
   require_prop_types,
   styled_default,
   useThemeProps2 as useThemeProps
-} from "./chunk-UXVEVHLQ.js";
+} from "./chunk-FLXWOJIN.js";
 import {
   __toESM,
   require_react
@@ -239,4 +239,4 @@ export {
   typographyClasses_default,
   Typography_default
 };
-//# sourceMappingURL=chunk-Z5KIXJRK.js.map
+//# sourceMappingURL=chunk-2OWUCR2O.js.map

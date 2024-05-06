@@ -2,17 +2,20 @@ import React, { useState, useEffect } from "react";
 import "./joblisting.css";
 import { NavLink } from "react-router-dom";
 import JobInfo from "./jobinfo/JobInfo";
+import Loader from "../loader/Loader";
 function JobListing({
   handlejobRole,
   handlelocation,
   handleminJdSalary,
   searchResult,
 }) {
-  const [jobsData, setJobsData] = useState(null);
+  const [jobsData, setJobsData] = useState([]);
   const [error, setError] = useState(null);
   const [jobRole, setjobRole] = useState([]);
   const [location, setlocation] = useState([]);
   const [minJdSalary, setminJdSalary] = useState([]);
+  const [pagelimit,setpagelimit]=useState(10);        // pagelimit for  the iinfinite scroll
+  const[loading,setLoading]=useState(true);
   handlejobRole(jobRole);
   handlelocation(location);
   handleminJdSalary(minJdSalary);
@@ -22,7 +25,7 @@ function JobListing({
       myHeaders.append("Content-Type", "application/json");
 
       const body = JSON.stringify({
-        limit: 20,
+        limit: pagelimit,
         offset: 0,
       });
 
@@ -43,6 +46,7 @@ function JobListing({
         const data = await response.json();
         console.log("coming data", data.jdList);
         setJobsData(data.jdList);
+        setLoading(false)  //when it get data then it become false again 
 
         const extractedJobRoles = data.jdList
           .map((roles) => roles.jobRole)
@@ -71,11 +75,37 @@ function JobListing({
     };
 
     fetchData();
-  }, []);
+  }, [pagelimit]);
 
   if (error) {
     return <div>Error: {error.message}</div>;
   }
+
+  //implement the Infinite scroll feature 
+  const handleInfiniteScroll=async()=>{
+   try{
+    // console.log("scrollheight"+document.documentElement.scrollHeight);
+    // console.log('innerHeight'+window.innerHeight);
+    // console.log("scrollTop"+document.documentElement.scrollTop);
+    //main logic is scrollTop+innerheight== scrollHeight
+    if(document.documentElement.scrollTop+window.innerHeight+1>=document.documentElement.scrollHeight){
+        setLoading(true);
+        setpagelimit(prev=>prev+10);
+    }
+   }
+   catch(err){
+    console.log(err);
+   }
+  }
+  useEffect(()=>{
+    window.addEventListener('scroll',handleInfiniteScroll);
+    return ()=>window.removeEventListener('scroll',handleInfiniteScroll);  // cleaner for the eventListner
+   
+  },[])
+
+
+
+
 
   return (
     <div className="job__list-div">
@@ -191,11 +221,15 @@ function JobListing({
           }
         </div>
       )}
+      {loading&&<Loader/>}
     </div>
+    
   );
 }
 
 export default JobListing;
+
+   //use it as an helper for handling it correctly and can be remove later
 {
   /* <li key={job.jdUid}>
                                 
